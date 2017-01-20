@@ -1,0 +1,54 @@
+<div class="homepage">
+	<div class="navbar">
+		<div class="left-side">
+			<a href=".." class="techkriti-logo-container">
+				<img src="./img/kachkachblue.png">
+			</a>
+			<a href="../hospitality">Hospitality</a>
+			<a href="../sponsors">Sponsors</a>
+			<a href="../contacts">Contacts</a>
+		</div>
+		<div class="right-side">
+			<a>Login</a>
+			<a>Sign up</a>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="logo-and-stuff">
+			<div class="competitions-logo-container">
+				<span class="competitions-logo">Competitions</span>
+				<span class="underline"></span>
+				<div class="tagline">Factualizing&nbsp;Fiction</div>
+			</div>
+		</div>
+		<div class="categories-container">
+			<div ng-click="selectCategory(c)" class="category-container blabla" ng-class="{chosen: (c.title == selected.category) }" ng-repeat="c in categories track by c.title">
+				<div class="category-perspective-container">
+					<div class="category-image-container">
+						<img ng-src="{{c.img}}">
+					</div>
+					<div class="category-color-overlay"></div>
+					<div class="category-title-container">
+						<div class="text">
+							<span>{{c.title}}</span>
+							<span class="underline"></span>
+						</div>
+					</div>
+				</div>
+				<span class="category-perspective-container-overlay"></span>
+			</div>
+		</div>
+		<div ng-if="selected.category!=''" class="subcategories-container">
+			<div ng-click="selectSubcategory(subcategory)" ng-class="{chosen: (subcategory == selected.subcategory)}" class="subcategory-container" ng-repeat="subcategory in selected.subcategories">
+				<span>{{subcategory}}</span>
+			</div>
+		</div>
+		<div ng-if="selected.subcategory!='' && selected.category!=''" class="events-outer-container">
+			<div class="events-container">
+				<a ng-href="#/{{selected.category}}/{{selected.subcategory}}/{{event}}" class="event-container" ng-repeat="event in selected.events">
+					<span>{{event}}</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

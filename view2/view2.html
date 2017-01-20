@@ -1,0 +1,432 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+
+
+<form class="tile-w">
+<div style='display:flex;justify-content:center;'>
+
+
+
+    <span class="close" onclick='close1()' style='margin-left:auto;'>x</span>
+
+</div>
+			 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="user">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Username/Email<span>*</span></label>
+</div>
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="password" name="name" id="pwd">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Password<span>*</span></label>
+</div>
+<span class='error' id='error'></span>
+<div class='butts' onclick="functi()" id='submit'>Submit</div>
+<div class='butts' id='signup_login'>signup</div>
+<div class='butts'  id='forgot_login'>Forgot Password</div>
+<div class='butts'  id='resend'>Resend Email</div>
+
+</form>
+
+
+</div>
+<div style='max-height:100%;' id="myModal1" class="modal">
+
+  <!-- Modal content -->
+
+<form id='form-for-signup' class="tile-w">
+
+<span class='heading'>SIGNUP</span>
+    <span class="close">x</span>
+
+
+	    <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="names">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Name<span>*</span></label>
+</div>
+
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="username">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Username<span>*</span></label>
+<span id='error11'></span>
+</div>
+
+			
+
+
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="email">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Email<span>*</span></label>
+</div>
+ <div style='margin-bottom:35px;' class="group">      
+<label style='pointer-events:visible;display:inline' class=" control radio">Male<input type="radio" name="gender" id="gender1" value="Male">
+                <div class="control__indicator"></div></label>
+				<label style='pointer-events:visible;display:inline' class=" control radio">Female<input type="radio"  name="gender" id="gender2"  value="Female">
+                <div class="control__indicator"></div></label>
+               
+			</label>
+
+</div>
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="contact">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Phone No.<span>*</span></label>
+</div>
+
+
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="college">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>College Name<span>*</span></label>
+</div>
+
+			 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="facebook">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Facebook Profile link<span>*</span></label>
+</div>
+
+
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="password" name="name" id="password">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Password<span>*</span></label>
+</div>
+
+<span class='error' id='error1'></span>
+<div class='butts' id='signup'>Submit</div>
+<div class='butts' id='signup_login_button'>Login</div>
+
+</form>
+
+
+</div>
+
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+
+
+<form class="tile-w">
+<span class='heading'>RECOVER</span>
+    <span class="close">x</span>
+			 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="forgot_email">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Email<span>*</span></label>
+</div>
+
+				 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="forgot_username">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Username<span>*</span></label>
+</div>
+<span class='error' id='error2'></span>
+<div class='butts' id='forgot'>Submit</div>
+</form>
+  </div>
+
+</div>
+
+
+
+
+<div id="myModal3" style='max-height:130%;height:100%;' class="modal">
+
+  <!-- Modal content -->
+
+
+
+<form id='form_comp' class="tile-w">
+<div style='display:flex;justify-content:center;'>
+
+
+
+    <span class="close" onclick="close2()" style='margin-left:auto;'>x</span>
+
+</div>
+ <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="team">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>TEAM NAME<span>*</span></label>
+</div>
+		 <div class="group">      
+
+     
+				<input  class="inputMaterial fixed_comp" required type="text" readonly name="name" id="person1">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+
+</div>
+</form>
+
+
+</div>
+
+<div id="myModal4" class="modal">
+
+  <!-- Modal content -->
+  <div  class="modal-content">
+    <span class="close">x</span>
+
+			
+<p style="font-size: 140%; margin-top: 4%;" id='what_info'>Check the inbox or spam folder of your  mailid </p>
+  </div>
+
+</div>
+
+
+<div id="myModal5" style='overflow:auto;' class="modal"><!--Profile-->
+
+  <!-- Modal content -->
+<form  class="tile-w">
+    <span id='close5' class="close">x</span>
+
+
+
+<div id='list_comp' style="margin-bottom: 5%;">
+<span style='display: block;font-weight:bold;'>MEMBER DETAILS</span><br>
+<table border='3' id='mytable'>
+<tbody style="
+    
+" id="tbody0">
+</tbody>
+</table>
+</div>
+<div style='margin-bottom:6%;' id='list_comp1'>
+<span style='display: block;font-weight:bold;'>COMPETITION DETAILS</span><br>
+<table border='3' id='mytable'>
+<tbody style="
+    
+" id="tbody">
+</tbody>
+</table>
+
+</div>
+
+<div style='margin-bottom:6%;' id='list_comp3'>
+<span style='display: block;font-weight:bold;'>TECHNOCRUISE EVENT DETAILS</span><br>
+<table border='3' id='mytable'>
+<tbody style="
+    
+" id="tbody2">
+</tbody>
+</table>
+</div>
+
+
+<div style='margin-bottom:6%;' id='list_comp2'>
+<span style='display: block;font-weight:bold;'>TECHNOCRUISE WORKSHOP DETAILS</span><br>
+<table border='3' id='mytable'>
+<tbody style=""
+    id="tbody1">
+</tbody>
+</table>
+
+</div>
+
+
+<div id='change_pass' class='butts'>Change Password</div>
+
+</form>
+
+</div>
+<div id="myModal6" class="modal">
+
+  <!-- Modal content -->
+
+
+<form class="tile-w">
+<span style='margin-left:29%;' class='heading'>CHANGE</span>
+    <span class="close">x</span>
+			 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="password" name="name" id="old_pass">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Old Password<span>*</span></label>
+</div>
+			 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="password" name="name" id="new_pass">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>New Password<span>*</span></label>
+</div>
+<span class='error' id='error6'></span>
+<div class='butts' id='changes'>Change</div>
+</form>
+
+
+</div>
+
+<div id="myModal7" class="modal">
+
+  <!-- Modal content -->
+
+
+<form class="tile-w">
+<span class='heading'>RESEND</span>
+    <span class="close">x</span>
+			 <div class="group">      
+
+     
+				<input  class="inputMaterial" required type="text" name="name" id="resend_email">
+ <span class="highlight"></span>
+      <span class="bar"></span>
+
+			<label>Email<span>*</span></label>
+</div>
+		
+<span class='error' id='error7'></span>
+<div class='butts' id='resend_submit'>Submit</div>
+</form>
+  </div>
+
+
+<div class="eventpage">
+	<div class="navbar fixed">
+		<div class="left-side">
+			<a ng-click="track('puller')" class="arrow-button toOpen" style="width: 56px;display: inline-block;">&nbsp;</a>
+			<div class="rcrumbs" id="breadcrumbs" style="height:0px;">
+        <ul>
+            <li class='show'><a style='border-bottom:0px;padding:0;' class="techkriti-logo-container crumpy" href="https://www.techkriti.org"><img src='./img/kachkachblue.png'></a><span class="divider">></span></li>
+            <li  class='show'><a style='border-bottom:0px;padding:0;' href="https://www.techkriti.org/main/competitions">Competitions</a><span class="divider">></span></li>
+            <li class='show'><a style='border-bottom:0px;padding:0;' class='crumpy' href="#">{{event.title}}</a></li>
+        </ul>
+    </div>
+		</div>
+    
+	</div>
+	<div ng-controller='View3Ctrl' class="scrollble-tabs-container">
+		<div class="scrollble-tabs">
+			<div class="scrollable-tabs-helper">
+				<div ng-click="selectTab(tab.title)" data-dataLoaded="{{dataLoaded}}" ng-class="{true: (tab.title==selected.tab)}" class="tab" ng-repeat="tab in event.desc">{{tab.title}}</div>
+        <div class='tab' onclick='logout()' ng-style="log_style" id='gm'><img  src='./images/logout.svg'></div>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="event-title-and-buttons" style="    display: block;
+    max-width: 900px;
+    margin: auto;">
+		<div class="event-title-and-shadow-container" style="max-width: 900px;
+    margin: auto;
+    padding-top: 20px;
+    width: 100%;
+    display: inline-block;
+    text-align: center">
+<div class="prizemoney _mobile" id='prize_money' style='display:inline-block;float:left;margin-left:0;'><div class="prizetab" style="position:relative;height:100px;display:inline-block"><img style="height: 109px;" src="animated-trophy.gif"><div style="position:absolute;    width: 159%;
+    font-weight: bold;display:flex;
+    font-size: x-large;text-align:center;bottom:9px;color:#2c3949;font-family: 'Montserrat', sans-serif;
+left:70px;" id='prize' class="ng-binding"><span>INR&nbsp;&nbsp;</span><span>{{event.prize}}</span></div>
+<div style="position:absolute;width:153%;text-align:center;bottom:38px;color:#f5d012;font-family: 'Montserrat', sans-serif;
+left:70px;" id='prize' class="ng-binding">PRIZES WORTH</div></div><!-- ngIf: !mobile --></div>
+
+			<span style="margin:0 auto;margin-top:3%;" class="event-title">{{event.title}}</span>
+<button id='myBtn' style='float:right;margin-top:3%;' class='btn' onclick="func()">REGISTER</button>
+		</div>
+	</div>
+	<div class="displayble" compile="eventContent" window-width></div>
+</div>
+
+<div ng-if="true" class="side-puller {{sidePull}}">
+	<a href="./" class="logos">
+		<div class="techkriti">
+			Competitions
+		</div>
+		<!-- <div class="techkriti">
+			<div>
+				TECHKRITI'<sup>17</sup>
+			</div>
+		</div>
+		<div>23<sup>rd</sup> - 26<sup>th</sup> March</div> -->
+	</a>
+	<div class="outer-event-container">
+		<div class="event-container">
+			<div ng-repeat="c in categories">
+				<div class="link padl1 {{sibbling.cat==c.title}}" ng-click="sibbling.cat==c.title?sibbling.cat='':sibbling.cat=c.title">
+					<span>{{c.title}}</span>
+					<span class="svg {{sibbling.cat==c.title}}">
+						<svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" fill="#8699a7" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg>
+					</span>
+				</div>
+				<div ng-init="c.state=0" statechanger="c.state" height-when-active="{{sibbling.cat==c.title}}" class="overflow-hidden">
+					<div ng-repeat="s in subcategories[c.title]">
+						<div class="link padl2 {{sibbling.sub==s.title}}" ng-click="updateThisHeightController(s,c)">
+							<span>{{s.title}}</span>
+							<span class="svg {{sibbling.sub==s.title}}" style="margin-top: 7px;">
+								<svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet"><path fill="#8699a7" d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path><path d="M0 0h48v48h-48z" fill="none"></path></svg>
+							</span>
+						</div>
+						<div height-when-active="{{sibbling.sub==s.title}}" class="overflow-hidden">
+							<a class="link padl3 {{e.title==selectedSub}}" ng-repeat="e in GetEvents(s.title)" ng-href="#/{{c.title}}/{{s.title}}/{{e.title}}">{{e.title}}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menu-toggle" class="{{sidePull?'open':''}}" ng-click="track('puller')">
+	  <div id="hamburger">
+	    <span></span>
+	   

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tilt Hover Effects | Codrops</title>
+		<meta name="description" content="Some ideas for hover effects with a fancy tilt effect" />
+		<meta name="keywords" content="tilt, hover, effect, demo, inspiration, animation, template" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Abril+Fatface" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/pater.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<style type="text/css">
+			.content--c2 div{
+				display: flex;
+			}
+			        .navbar{
+            font-family: "Montserrat";
+            width: 100%;
+            display: flex;
+            height: 100%;
+            position: relative;
+            line-height: 56px;
+            background-color: rgba(0,0,0,0.4);
+            border-bottom: solid 1px rgba(255,255,255,0.4);
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -moz-box-pack: justify;
+            box-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+            -ms-flex-pack: justify;
+            -webkit-box-lines: no-wrap;
+            -moz-box-lines: no-wrap;
+            box-lines: no-wrap;
+            -webkit-flex-wrap: no-wrap;
+            -moz-flex-wrap: no-wrap;
+            -ms-flex-wrap: no-wrap;
+            flex-wrap: no-wrap;
+            font-size: 15px;
+            z-index: 15;
+            position: relative;
+            color: #fff !important;
+        } 
+        .techkriti-logo-container img{
+            height: 28px;
+            margin-top: -2px;
+            margin-left: 12px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        .navbar .left-side a:hover {
+            color: #0070c2;
+            border-bottom: 3px solid;
+        }
+        .navbar .left-side a {
+            padding: 0 6px;
+            color: white;
+            display: inline-block;
+            transition: all ease 180ms;
+            height: 56px;
+        }
+        .navbar .right-side a {
+            margin-right: 12px;
+            color: white
+        }
+        .drop_down{
+        	display: none;
+        }
+        @media only screen and (max-width: 500px) {
+             .navbar div a{
+	            display: block ;
+	            clear: both;
+	         }
+	         .navbar{
+	            display: block !important;
+	         }
+	         .left-side,.right-side{
+	            display: block;
+	            text-align: center!important;
+	         }
+	         .right-side {
+	            width: 100%;
+	            margin: auto;
+	            float: none;
+	        }
+	        .left-side {
+	            display: inline-block;
+	            position: absolute;
+	            width: 100%;
+	           background-color: rgba(0,0,0,0.4);            
+	        }
+	        .techkriti-logo-container{
+	            width: 15%;
+	                background: black;
+	        }
+	        .techkriti-logo-container .logo{
+	            float: left;
+	        }
+	        .techkriti-logo-container .drop_down{
+	            float: right;
+	        }
+	        .left-side a:not(.techkriti-logo-container){
+	            display: none ;
+	        }
+	        .right-side {
+	            display: none ;
+	        }
+	         .drop_down{
+	            display: block;
+	            position: absolute;
+	            z-index: 1;
+	            right: 20px;
+	            font-size: 30px;
+	         }
+	         .techkriti-logo-container img {
+	            height: 45px;
+	            margin-top: 5px;
+	            margin-left: 0px;
+	        }
+	        
+	        .drop{
+	            display: block !important;
+	        }
+        }
+		</style>
+		<script>
+			document.documentElement.className = 'js';
+		</script>
+	</head>
+	<body>
+		<div class="navbar">
+	        <div class="drop_down">
+	          ☰
+	        </div>
+	        <div class="left-side">
+	            <a style="float: left;" href="" class="techkriti-logo-container">
+	                <img class="logo" src="kachkachblue.png">
+	            </a>
+	            <a href="../hospitality">Hospitality</a>
+	            <a href="../sponsors">Sponsors</a>
+	            <a href="../contact">Contacts</a>
+	        </div>
+	        <div class="right-side">
+	            <a>Login</a>
+	            <a>Sign up</a>
+	        </div>
+	    </div>
+		<main>
+			<section class="content content--c2">
+				<div>
+	 				<a href="#DesignEvents" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/3.jpg" alt="img03" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Helen Portland</h3>
+								<p class="tilter__description">Seattle</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/4.jpg" alt="img04" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Kara Greene</h3>
+								<p class="tilter__description">New York</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+			    </div>
+			    <div>
+	 				<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/3.jpg" alt="img03" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Helen Portland</h3>
+								<p class="tilter__description">Seattle</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/4.jpg" alt="img04" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Kara Greene</h3>
+								<p class="tilter__description">New York</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+			    </div>
+			    <div>
+	 				<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/3.jpg" alt="img03" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Helen Portland</h3>
+								<p class="tilter__description">Seattle</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/4.jpg" alt="img04" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Kara Greene</h3>
+								<p class="tilter__description">New York</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+			    </div>
+			    <div>
+	 				<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/3.jpg" alt="img03" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Helen Portland</h3>
+								<p class="tilter__description">Seattle</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="tilter tilter--2">
+						<figure class="tilter__figure">
+							<img class="tilter__image" src="img/4.jpg" alt="img04" />
+							<div class="tilter__deco tilter__deco--shine"><div></div></div>
+							<div class="tilter__deco tilter__deco--overlay"></div>
+							<figcaption class="tilter__caption">
+								<h3 class="tilter__title">Kara Greene</h3>
+								<p class="tilter__description">New York</p>
+							</figcaption>
+							<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+								<path d="M20.5,20.5h260v375h-260V20.5z" />
+							</svg>
+						</figure>
+					</a>
+			    </div>
+			</section>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			var tiltSettings = [
+			{},
+			{
+				movement: {
+					imgWrapper : {
+						translation : {x: 10, y: 10, z: 30},
+						rotation : {x: 0, y: -10, z: 0},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					},
+					lines : {
+						translation : {x: 10, y: 10, z: [0,70]},
+						rotation : {x: 0, y: 0, z: -2},
+						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+					},
+					caption : {
+						rotation : {x: 0, y: 0, z: 2},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					},
+					overlay : {
+						translation : {x: 10, y: -10, z: 0},
+						rotation : {x: 0, y: 0, z: 2},
+						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 100, y: 100, z: 0},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					}
+				}
+			},
+			{
+				movement: {
+					imgWrapper : {
+						rotation : {x: -5, y: 10, z: 0},
+						reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
+					},
+					caption : {
+						translation : {x: 30, y: 30, z: [0,40]},
+						rotation : {x: [0,15], y: 0, z: 0},
+						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+					},
+					overlay : {
+						translation : {x: 10, y: 10, z: [0,20]},
+						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 100, y: 100, z: 0},
+						reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
+					}
+				}
+			},
+			{
+				movement: {
+					imgWrapper : {
+						rotation : {x: -5, y: 10, z: 0},
+						reverseAnimation : {duration : 50, easing : 'easeOutQuad'}
+					},
+					caption : {
+						translation : {x: 20, y: 20, z: 0},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					},
+					overlay : {
+						translation : {x: 5, y: -5, z: 0},
+						rotation : {x: 0, y: 0, z: 6},
+						reverseAnimation : {duration : 1000, easing : 'easeOutQuad'}
+					},
+					shine : {
+						translation : {x: 50, y: 50, z: 0},
+						reverseAnimation : {duration : 50, easing : 'easeOutQuad'}
+					}
+				}
+			},
+			{
+				movement: {
+					imgWrapper : {
+						translation : {x: 0, y: -8, z: 0},
+						rotation : {x: 3, y: 3, z: 0},
+						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+					},
+					lines : {
+						translation : {x: 15, y: 15, z: [0,15]},
+						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+					},
+					overlay : {
+						translation : {x: 0, y: 8, z: 0},
+						reverseAnimation : {duration : 600, easing : 'easeOutExpo'}
+					},
+					caption : {
+						translation : {x: 10, y: -15, z: 0},
+						reverseAnimation : {duration : 900, easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 50, y: 50, z: 0},
+						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+					}
+				}
+			},
+			{
+				movement: {
+					lines : {
+						translation : {x: -5, y: 5, z: 0},
+						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+					},
+					caption : {
+						translation : {x: 15, y: 15, z: 0},
+						rotation : {x: 0, y: 0, z: 3},
+						reverseAnimation : {duration : 1500, easing : 'easeOutElastic', elasticity : 700}
+					},
+					overlay : {
+						translation : {x: 15, y: -15, z: 0},
+						reverseAnimation : {duration : 500,easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 50, y: 50, z: 0},
+						reverseAnimation : {duration : 500, easing : 'easeOutExpo'}
+					}
+				}
+			},
+			{
+				movement: {
+					imgWrapper : {
+						translation : {x: 5, y: 5, z: 0},
+						reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
+					},
+					caption : {
+						translation : {x: 10, y: 10, z: [0,50]},
+						reverseAnimation : {duration : 1000, easing : 'easeOutQuart'}
+					},
+					shine : {
+						translation : {x: 50, y: 50, z: 0},
+						reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
+					}
+				}
+			},
+			{
+				movement: {
+					lines : {
+						translation : {x: 40, y: 40, z: 0},
+						reverseAnimation : {duration : 1500, easing : 'easeOutElastic'}
+					},
+					caption : {
+						translation : {x: 20, y: 20, z: 0},
+						rotation : {x: 0, y: 0, z: -5},
+						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+					},
+					overlay : {
+						translation : {x: -30, y: -30, z: 0},
+						rotation : {x: 0, y: 0, z: 3},
+						reverseAnimation : {duration : 750, easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 100, y: 100, z: 0},
+						reverseAnimation : {duration : 750, easing : 'easeOutExpo'}
+					}
+				}
+			}];
+
+			function init() {
+				var idx = 0;
+				[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) { 
+					idx = pos%2 === 0 ? idx+1 : idx;
+					new TiltFx(el, tiltSettings[idx-1]);
+				});
+			}
+
+			// Preload all images.
+			imagesLoaded(document.querySelector('main'), function() {
+				document.body.classList.remove('loading');
+				init();
+			});
+
+		})();
+		</script>
+<script src="loader1.js"></script>
+	</body>
+</html>
