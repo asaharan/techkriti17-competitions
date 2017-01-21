@@ -3,11 +3,11 @@ session_start();
 
 $flag =0;
   if (empty($_POST["username"])) {
-    $response="false";
+    $response=false;
     $flag = 1;
   } 
   if (empty($_POST["pass"])&&($flag==0)) {
-    $response= "false";
+    $response= false;
     $flag = 1;
   } 
 
@@ -55,7 +55,7 @@ $_SESSION["id"]=$id;
 $_SESSION["name"]=$name;
 
 
-$response=$name;
+$response=$id;
     
  }
 
@@ -85,7 +85,7 @@ $_SESSION["id"]=$id;
 $_SESSION["name"]=$name;
 
 
-$response=$name;
+$response=$id;
     
  }
 
@@ -107,7 +107,7 @@ $response=$name;
 
 
 if($k==0)
- {$response="false";
+ {$response=false;
  }
 $conn->close();
 }

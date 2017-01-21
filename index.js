@@ -29,7 +29,11 @@ var trim = str.replace(/^\s+|\s+$/g, '');
 
         if((trim)!="false")
         	{
+console.log(trim);
+str=trim.replace(/^"(.+(?="$))"$/, '$1');
 
+console.log(str);
+$scope.per1=str;
 
 $scope.log_style={
 
@@ -39,6 +43,7 @@ $scope.log_style={
         	}
         	else
         	{
+
         	$scope.log_style={
 
         			'display':'none'
@@ -56,25 +61,288 @@ $scope.log_style={
     $scope.carname = "Volvo";
     $scope.about=function(){
           $scope.carname='nano';
-    }    
-});
+    }   
 
-app.controller('View4Ctrl', function($scope,$http) {
+
 var url=window.location.hash.substr(1);
 url=url.split("/");
-var jist=0
-
-
-var letitbe=0;
+var jist=0;
+var max_size=0;
+$scope.arr=[];
 var competition=decodeURIComponent(url[3]);
-console.log(competition);
-	 $http.get("php/check1.php").then(function mySucces(response) {
+$http({
+  method: 'POST',
+  url: 'php/loader1.php',
+data:"competition="+competition,
+headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+}).then(function mySucces(response) {
+var  str=response.data;
+
+angular.forEach(str, function (element1, index) {
+
+   max_size=element1.max_t_size;
+$scope.arr=[];
+var i=0;var k=0;
+for(i=2;i<=max_size;i++)
+{
+
+//$scope.arr[k]['key']=i;
+
+
+var firstObj = new Object();
+firstObj.first = i;
+firstObj.second = "";
+$scope.arr.push(firstObj);
+
+k=k+1;
+
+}
+console.log($scope.arr);
+$scope.number = max_size;
+
+});//foreach
+
+},
+     function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+
+
+$scope.func = function() {
+
+ $http.get("php/check1.php").then(function mySucces(response) {
+console.log(response);
 var  str=response.data;
 var trim = str.replace(/^\s+|\s+$/g, '');
 
+        if((trim)!="false")
+        	{
+str=trim.replace(/^"(.+(?="$))"$/, '$1');
+$scope.per1=str;
+$scope.log_style2={
+
+        			'display':'block'
+        		};
+
+        	}
+        	else
+        	{
+
+        	$scope.log_style1={
+
+        			'display':'block'
+        		};	
+        	}
+    }, function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+$scope.functi = function() {
+var myEl = angular.element( document.querySelector( '#user' ) );
+var user=myEl.val();
+var myEl = angular.element( document.querySelector( '#pwd' ) );
+var pwd=myEl.val();
+$http({
+  method: 'POST',
+  url: 'php/login.php',
+data:"username="+user+"&pass="+pwd+"&gender=male",
+headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+}).then(function mySucces(response) {
+var  str=response.data;
+
+var trim = str.replace(/^\s+|\s+$/g, '');
+
+        if((trim)!="false")
+        	{
+str=trim.replace(/^"(.+(?="$))"$/, '$1');
+$scope.per1=str;
+$scope.log_style1={
+
+        			'display':'none'
+        		};
+$scope.log_style2={
+
+        			'display':'block'
+        		};
+
+        	}
+        	else
+        	{
+
+        	$scope.error='INVALID credentials or mail not confirmed'	
+        	}
+
+
+},
+     function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+
+
+
+
+
+}
+
+
+
+$scope.user_change = function(id,attr) {
+
+console.log(id);
+console.log(attr);
+var myEl = angular.element( document.querySelector( '#'+id ) );
+id=myEl.val();
+$http({
+  method: 'POST',
+  url: 'php/available.php',
+data:"id="+id,
+headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+}).then(function mySucces(response) {
+var  str=response.data;
+var trim = str.replace(/^\s+|\s+$/g, '');
+//var myEl = angular.element( document.querySelector( '#'+ attr) );
+//myEl.val(trim);
+$scope.arr[attr-2]['second']=trim;
+
+
+},
+     function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+
+
+
+
+
+}
+
+$scope.final_reg = function() {
+var i=1;var k=0,str="";
+var myEl = angular.element( document.querySelector( '#team' ) );
+var team=myEl.val();
+
+for(i=1;i<=$scope.number;i++)
+
+{
+
+var queryResult = document.querySelector("#person"+i);
+var wrappedQueryResult = angular.element(queryResult);
+var value=wrappedQueryResult.val();
+if(value!="")
+{
+if(k==0)
+{
+str=str+value;
+}
+else
+{str=str+","+value;}
+}
+k=k+1;
+
+}
+$http({
+  method: 'POST',
+  url: 'php/reg_comp.php',
+data:"team="+team+"&members="+str+"&competition="+competition,
+headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+}).then(function mySucces(response) {
+
+
+var  str=response.data;
+var trim = str.replace(/^\s+|\s+$/g, '');
+
+        if((trim)=='true')
+        	{
+
+
+$scope.log_style2={
+
+        			'display':'none'
+        		};
+$scope.log_style4={
+
+        			'display':'block'
+        		};
+
+        	}
+        	else
+        	{
+trim=trim.replace(/^"(.+(?="$))"$/, '$1');
+        	$scope.error_reg=trim;	
+        	}
+
+
+},
+     function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+
+
+
+
+
+}
+
+$scope.close = function() {
+
+$scope.log_style={
+
+        			'display':'none'
+        		};
+}
+$scope.close2 = function() {
+
+$scope.log_style2={
+
+        			'display':'none'
+        		};
+}
+$scope.close4 = function() {
+
+$scope.log_style4={
+
+        			'display':'none'
+        		};
+}
+ 
+
+$scope.logout = function() {
+
+ $http.get("php/logout.php").then(function mySucces(response) {
+
+location.reload(true);
+    }, function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+}
+
 
 });
-});
+
+
+
+
+
+
+
+
 
 app
 .directive('blabla',[function(){

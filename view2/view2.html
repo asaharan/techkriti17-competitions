@@ -1,5 +1,6 @@
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div ng-controller="View3Ctrl">
+<div id="myModal" class="modal" ng-style="log_style1">
 
   <!-- Modal content -->
 
@@ -9,13 +10,13 @@
 
 
 
-    <span class="close" onclick='close1()' style='margin-left:auto;'>x</span>
+    <span class="close" ng-click='close1()' style='margin-left:auto;'>x</span>
 
 </div>
 			 <div class="group">      
 
      
-				<input  class="inputMaterial" required type="text" name="name" id="user">
+				<input  class="inputMaterial" required type="text" name="name" ng-model='user' id="user">
  <span class="highlight"></span>
       <span class="bar"></span>
 
@@ -24,14 +25,14 @@
  <div class="group">      
 
      
-				<input  class="inputMaterial" required type="password" name="name" id="pwd">
+				<input  class="inputMaterial" required type="password" name="name" ng-model='pwd' id="pwd">
  <span class="highlight"></span>
       <span class="bar"></span>
 
 			<label>Password<span>*</span></label>
 </div>
-<span class='error' id='error'></span>
-<div class='butts' onclick="functi()" id='submit'>Submit</div>
+<span class='error' id='error'>{{error}}</span>
+<div class='butts' ng-click="functi()" id='submit'>Submit</div>
 <div class='butts' id='signup_login'>signup</div>
 <div class='butts'  id='forgot_login'>Forgot Password</div>
 <div class='butts'  id='resend'>Resend Email</div>
@@ -175,12 +176,12 @@
 </form>
   </div>
 
-</div>
 
 
 
 
-<div id="myModal3" style='max-height:130%;height:100%;' class="modal">
+
+<div id="myModal3" style='max-height:130%;height:100%;' ng-style="log_style2"  class="modal">
 
   <!-- Modal content -->
 
@@ -191,7 +192,7 @@
 
 
 
-    <span class="close" onclick="close2()" style='margin-left:auto;'>x</span>
+    <span class="close" ng-click='close2()' style='margin-left:auto;'>x</span>
 
 </div>
  <div class="group">      
@@ -206,25 +207,29 @@
 		 <div class="group">      
 
      
-				<input  class="inputMaterial fixed_comp" required type="text" readonly name="name" id="person1">
+				<input  class="inputMaterial fixed_comp" required type="text" readonly name="name" value={{per1}} id="person1">
  <span class="highlight"></span>
       <span class="bar"></span>
 
 
 </div>
+<div class='group' ng-repeat="i in arr track  by $index"><input  class="inputMaterial fixed_comp" ng-model='usernames' ng-change="user_change('person{{i.first}}',{{i.first}})"required type='text' name='name' data='{{i.first}}' id='person{{i.first}}'> <span class='highlight'></span><span class='bar'></span><label>PERSON {{i.first}} tech id<span>*</span></label><span class='error' id='error3{{i.first}}' ng-value="{{i.first}}" >{{i.second}}</span></div>
+
+<span class='error' id='error3'>{{error_reg}}</span>
+<div class='butts' id='com_register' ng-click='final_reg()'>Submit</div>
 </form>
 
 
 </div>
 
-<div id="myModal4" class="modal">
+<div id="myModal4" class="modal"  ng-style="log_style4" >
 
   <!-- Modal content -->
   <div  class="modal-content">
-    <span class="close">x</span>
+    <span class="close" ng-click='close4()'>x</span>
 
 			
-<p style="font-size: 140%; margin-top: 4%;" id='what_info'>Check the inbox or spam folder of your  mailid </p>
+<p style="font-size: 140%; margin-top: 4%;" id='what_info'>You have succcesfully registered </p>
   </div>
 
 </div>
@@ -356,11 +361,11 @@
 		</div>
     
 	</div>
-	<div ng-controller='View3Ctrl' class="scrollble-tabs-container">
+	<div  class="scrollble-tabs-container">
 		<div class="scrollble-tabs">
 			<div class="scrollable-tabs-helper">
 				<div ng-click="selectTab(tab.title)" data-dataLoaded="{{dataLoaded}}" ng-class="{true: (tab.title==selected.tab)}" class="tab" ng-repeat="tab in event.desc">{{tab.title}}</div>
-        <div class='tab' onclick='logout()' ng-style="log_style" id='gm'><img  src='./images/logout.svg'></div>
+        <div class='tab' ng-click='logout()' ng-style="log_style" id='gm'><img  src='./images/logout.svg'></div>
 
 			</div>
 
@@ -368,7 +373,7 @@
 	</div>
 	<div class="event-title-and-buttons" style="    display: block;
     max-width: 900px;
-    margin: auto;">
+    margin: auto;" >
 		<div class="event-title-and-shadow-container" style="max-width: 900px;
     margin: auto;
     padding-top: 20px;
@@ -383,7 +388,7 @@ left:70px;" id='prize' class="ng-binding"><span>INR&nbsp;&nbsp;</span><span>{{ev
 left:70px;" id='prize' class="ng-binding">PRIZES WORTH</div></div><!-- ngIf: !mobile --></div>
 
 			<span style="margin:0 auto;margin-top:3%;" class="event-title">{{event.title}}</span>
-<button id='myBtn' style='float:right;margin-top:3%;' class='btn' onclick="func()">REGISTER</button>
+<button id='myBtn' style='float:right;margin-top:3%;' class='btn' ng-click="func()">REGISTER</button>
 		</div>
 	</div>
 	<div class="displayble" compile="eventContent" window-width></div>
@@ -429,4 +434,5 @@ left:70px;" id='prize' class="ng-binding">PRIZES WORTH</div></div><!-- ngIf: !mo
 	<div id="menu-toggle" class="{{sidePull?'open':''}}" ng-click="track('puller')">
 	  <div id="hamburger">
 	    <span></span>
+</div>
 	   
